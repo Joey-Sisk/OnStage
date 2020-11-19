@@ -23,8 +23,6 @@ function updatePage(eventData) {
 
 }
 
-
-
 $("#searchButton").on("click", function(event) {
   event.preventDefault();
 
