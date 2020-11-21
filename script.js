@@ -56,6 +56,7 @@ function updatePage() {
       nov: "",
       dec: ""
     };
+    
     const chartBarText = "22%2C2%2C3%2C9%2C15%2C2%2C7%2C3%2C13%2C14%2C4";
     const chartBarSize = "22%7C2%7C3%7C9%7C15%7C2%7C7%7C3%7C13%7C14%7C4";
 
