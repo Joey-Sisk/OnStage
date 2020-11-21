@@ -1,5 +1,4 @@
 
-
 function updatePage() {
   const keyword = $("#searchBar").val().trim();
 
@@ -32,6 +31,8 @@ function updatePage() {
       console.log("Venure Name: " + eventData[i].venue.name);
       console.log("Offer Type: " + eventData[i].offers[0].type);
       console.log("Event Location: " + eventData[i].venue.location);
+      console.log("Longitude: " + eventData[i].venue.longitude);
+      console.log("Latitude: " + eventData[i].venue.latitude);
     }
   });
 
@@ -43,48 +44,5 @@ $("#runSearch").on("click", function (event) { // when user enters city in textb
   updatePage();
 
 });
-
-// 5e819cfc0dc5827e31d44c0ea761bf34
-
-
-
-
-
-
-// function buildQueryURL() {
-
-//   const keyword = $("#searchBar").val().trim();
-
-//   const queryURL = `https://rest.bandsintown.com/artists/${keyword}/events?app_id=5e819cfc0dc5827e31d44c0ea761bf34`;
-
-//   console.log("---------------\nURL: " + queryURL + "\n---------------");
-
-//   return queryURL;
-// }
-
-// function updatePage(eventData) {
-//   console.log(eventData);
-//   console.log("------------------------------------");
-
-//   $("#place1").text();
-
-//   $("#place2").text();
-
-//   $("#place3").text();
-
-//   $("#place4").text();
-
-// }
-
-// $("#searchBar").on("click", function (event) {
-//   event.preventDefault();
-
-//   var queryURL = buildQueryURL();
-
-//   $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(updatePage);
-// });
 
 // 5e819cfc0dc5827e31d44c0ea761bf34
