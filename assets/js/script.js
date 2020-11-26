@@ -129,4 +129,4 @@ $('button').click(function (event) {
 			}
 		}
     }
-}
+});
