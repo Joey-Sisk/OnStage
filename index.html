@@ -22,7 +22,7 @@
           Docs
         </a>
     
-       
+      
         <div class="navbar-dropdown is-right">
           <a class="navbar-item">
             Favorites
@@ -38,14 +38,16 @@
     <div class="tile is-4 is-vertical is-parent">
       <div class="tile is-child box">
   <div class="field has-addons">
-    <div class="control">
-      <input class="input" type="text" placeholder="Find Your Music!">
-    </div>
-    <div class="control">
-      <a class="button is-rounded is-info">
+    <form action="submit">
+      <div class="control">
+        <input id="searchBar" class="input" type="text" placeholder="Find Your Music!">
+      </div>
+      <div class="control">
+        <a id="runSearch" class="button is-rounded is-info">
         Search
-      </a>
-    </div>
+        </a>
+      </div>
+     </form>
   </div>
 
     </div>
@@ -62,9 +64,75 @@
   <div class="tile is-parent">
     <div class="tile is-child box">
       <p class="title">Results</p>
-      <figure class="image is-2by1">
-        <img src="https://bulma.io/images/placeholders/640x480.png">
-      </figure>
+      
+    <div>
+      <div id="aritstInfo">
+        <h3 id="artist"></h3>
+        <p id="facebook"></p>
+        <p id="eventsAmount"></p>
+        <img id="thumbnail" src="" alt="Artist Thumbnail"></image>
+      </div>
+
+      <br>
+      
+      <div id="eventInfo0">
+        <p id="eventName0"></p>
+        <p id="eventDate0"></p>
+        <p id="venue0"></p>
+        <p id="location0"></p>
+        <p id="tickets0"></p>
+        <p id="description0"></p>
+      </div>
+
+      <br>
+
+      <div id="eventInfo1">
+        <p id="eventName1"></p>
+        <p id="eventDate1"></p>
+        <p id="venue1"></p>
+        <p id="location1"></p>
+        <p id="tickets1"></p>
+        <p id="description1"></p>
+      </div>
+
+      <br>
+
+      <div id="eventInfo2">
+        <p id="eventName2"></p>
+        <p id="eventDate2"></p>
+        <p id="venue2"></p>
+        <p id="location2"></p>
+        <p id="tickets2"></p>
+        <p id="description2"></p>
+      </div>
+
+      <br>
+
+      <div id="eventInfo3">
+        <p id="eventName3"></p>
+        <p id="eventDate3"></p>
+        <p id="venue3"></p>
+        <p id="location3"></p>
+        <p id="tickets3"></p>
+        <p id="description3"></p>
+      </div>
+
+      <br>
+
+      <div id="eventInfo4">
+        <p id="eventName4"></p>
+        <p id="eventDate4"></p>
+        <p id="venue4"></p>
+        <p id="location4"></p>
+        <p id="tickets4"></p>
+        <p id="description4"></p>
+      </div>
+
+    </div>
+
+
+    </div>
+
     </div>
   </div>
 
