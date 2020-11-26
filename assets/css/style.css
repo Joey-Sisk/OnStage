@@ -1,0 +1,41 @@
+.is-family-primary {
+    font-family: "Lequire DEMO";
+  }
+  
+  .is-family-secondary {
+    font-family: "Lequire DEMO";
+  }
+  
+  .is-family-sans-serif {
+    font-family: "Lequire DEMO";
+  }
+  
+  
+  
+  html {
+    background-color: #83D7E6;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+       -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+  }
+  
+  .navbar-item img {
+      max-height: 5rem;
+  }
+  
+  .box {
+    background-color: #83D7E6;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+  }
