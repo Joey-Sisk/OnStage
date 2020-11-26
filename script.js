@@ -1,5 +1,7 @@
+/* eslint-disable no-undef */
 //Save button for searching
 
+// eslint-disable-next-line no-undef
 $('#buttonSubmit').submit(function (event) {
     event.preventDefault();
 })
@@ -32,6 +34,6 @@ $('button').click(function (event) {
     }
 }
 
-
+);
 
     
