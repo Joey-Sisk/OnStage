@@ -9,7 +9,7 @@ Visit our Repo via:
 * [License](#License)
 
 # About
-OnStage was created for the given user to effortlessly find any artist and preview their current schedule along with the locations of their upcoming venues. OnStage features an in search text, where the user inputs the name of an artist, which then populates an itemized list and map of current venues booked. OnStage, also features local storage so that the users events are saved to be referenced in the future.
+OnStage was created for the given user to effortlessly find any artist and preview their current schedule along with the locations of their upcoming venues. OnStage features an in search text, where the user inputs the name of an artist, which then populates an itemized list and map of current venues booked. OnStage, also features local storage so that the user's events are saved to be referenced in the future.
 
 # APIs
 The following API's were used to help create OnStage:
