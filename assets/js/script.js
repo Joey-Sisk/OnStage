@@ -18,8 +18,8 @@ function updatePage() {
     $("#eventsAmount").text("Number of events: " + artistData.upcoming_event_count);
     $("#Thumbnail").attr("src", artistData.thumb_url);
 
-    console.log(artistData.name);
-    console.log(artistData.facebook_page_url);
+    console.log("Artist: " + artistData.name);
+    console.log("Facebook: " + artistData.facebook_page_url);
     console.log("Number of events: " + artistData.upcoming_event_count);
     console.log("Thumbnail: " + artistData.thumb_url);
 
@@ -40,7 +40,7 @@ function updatePage() {
       $(`#eventName${i}`).text(eventData[i].title);
       $(`#eventDate${i}`).text(eventData[i].datetime);
       $(`#venue${i}`).text(eventData[i].venue.name);
-      $(`#location${i}`).text(eventData[i].venue.location);
+      $(`#location${i}`).text("Event Location: " + eventData[i].venue.location);
       $(`#tickets${i}`).text("Offer Type: " + eventData[i].offers[0].type);
       $(`#description${i}`).text(eventData[i].description);
 
