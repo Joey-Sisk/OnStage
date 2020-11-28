@@ -80,7 +80,7 @@ $("#runSearch").on("click", function (event) { // search user input
   updatePage();
 });
 
-$("#searchBer").submit(function (event) {
+$("#runSearch").submit(function (event) {
   event.preventDefault();
 });
 
