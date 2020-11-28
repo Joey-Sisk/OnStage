@@ -1,14 +1,14 @@
-function onLoad() {
+function onLoad() { // load a band on first viewing to keep layout clean
   $("#searchBar").val("gorrilaz");
   updatePage();
 }
 
-function updatePage() {
+function updatePage() { // heavy lifter funcion calls primary and graph api
   const keyword = $("#searchBar").val().trim();
 
   const artistQueryURL = `https://rest.bandsintown.com/artists/${keyword}?app_id=5e819cfc0dc5827e31d44c0ea761bf34`;
 
-  console.log(
+  console.log( // api call which contains general artist info
     "---------------\nArtist URL: " + artistQueryURL + "\n---------------"
   );
 
@@ -17,20 +17,18 @@ function updatePage() {
   $.ajax({
     url: artistQueryURL,
     method: "GET",
-  }).then(function (artistData) {
+  }).then(function (artistData) { // apply info to dom
     $("#artist").text("Artist: " + artistData.name);
     $("#facebook").text("Facebook: " + artistData.facebook_page_url);
     $("#eventsAmount").text("Number of events: " + artistData.upcoming_event_count);
     $("#thumbnail").attr("src", artistData.thumb_url);
-
-    console.log("---------------\nThumbnail: " + artistData.thumb_url + "\n---------------");
 
     eventAmount = artistData.upcoming_event_count;
   });
 
   const eventQueryURL = `https://rest.bandsintown.com/artists/${keyword}/events?app_id=5e819cfc0dc5827e31d44c0ea761bf34&date=upcoming`;
 
-  console.log(
+  console.log( // call info for various upcomming events
     "---------------\nEvent URL: " + eventQueryURL + "\n---------------"
   );
 
@@ -38,7 +36,7 @@ function updatePage() {
     url: eventQueryURL,
     method: "GET",
   }).then(function (eventData) {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) { // apply up to 5 upcoming events to document
       $(`#eventName${i}`).text("Event Name: " + eventData[i].title);
       $(`#eventDate${i}`).text("Event Date: " + eventData[i].datetime);
       $(`#venue${i}`).text("Venue Name: " + eventData[i].venue.name);
@@ -47,39 +45,32 @@ function updatePage() {
       $(`#description${i}`).text("Description: " + eventData[i].description);
     }
 
-    const months = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    const months = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // array for months graph
 
     for (let i = 0; i < eventAmount; i++) {
-      const eventMonth = eventData[i].datetime.slice(5, 7);
+      const eventMonth = eventData[i].datetime.slice(5, 7); // gets just the month from the event dates
 
-      let arrayMonthLocation = eventMonth - 1;
+      let arrayMonthLocation = eventMonth - 1; // used to search array
 
-      arrayMonthLocation = parseInt(arrayMonthLocation);
+      arrayMonthLocation = parseInt(arrayMonthLocation); 
 
-      months[arrayMonthLocation]++;
+      months[arrayMonthLocation]++; // add 1 to each month a gig happens
     }
 
     const chartBarText = `${months[0]}%2C${months[1]}%2C${months[2]}%2C${months[3]}%2C${months[4]}%2C${months[5]}%2C${months[6]}%2C${months[7]}%2C${months[8]}%2C${months[9]}%2C${months[10]}%2C${months[11]}`;
     const chartBarSize = `${months[0]}%7C${months[1]}%7C${months[2]}%7C${months[3]}%7C${months[4]}%7C${months[5]}%7C${months[6]}%7C${months[7]}%7C${months[8]}%7C${months[9]}%7C${months[10]}%7C${months[11]}`;
 
-    const chartQueryURL = `https://image-charts.com/chart?chbr=8&chd=t:${chartBarText}&chl=${chartBarSize}&chma=0%2C0%2C10%2C10&chs=700x450&cht=bvs&chtt=Shows%20per%20month&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul%7CAug%7CSep%7COct%7CNov%7CDec&chxt=x%2Cy`;
+    const chartQueryURL = `https://image-charts.com/chart?chbr=8&chd=t:${chartBarText}&chf=b0%2Clg%2C90%2CEA469EFF%2C1%2C03A9F47C%2C0.4&chl=${chartBarSize}&chma=0%2C0%2C10%2C10&chs=700x450&cht=bvs&chtt=Shows%20per%20month&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul%7CAug%7CSep%7COct%7CNov%7CDec&chxt=x%2Cy`;
 
-    $.ajax({
-      url: chartQueryURL,
-      method: "GET",
-    }).then(function () {
-      console.log(
-        "---------------\nAdded Months: " + months + "\n---------------"
-      );
-    });
+    $("#graph").attr("src", chartQueryURL); // send graph to page
 
-    console.log(
+    console.log( // log charts url for debugging
       "---------------\nChart URL: " + chartQueryURL + "\n---------------"
     );
   });
 };
 
-$("#runSearch").on("click", function (event) {
+$("#runSearch").on("click", function (event) { // search user input
   event.preventDefault();
 
   updatePage();
