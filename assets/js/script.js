@@ -43,6 +43,7 @@ function updatePage() {
       $(`#location${i}`).text("Event Location: " + eventData[i].venue.location);
       $(`#tickets${i}`).text("Offer Type: " + eventData[i].offers[0].type);
       $(`#description${i}`).text("Description: " + eventData[i].description);
+      getMap(eventData);
 
       console.log("-------------------------------");
       console.log("Event Name: " + eventData[i].title);
