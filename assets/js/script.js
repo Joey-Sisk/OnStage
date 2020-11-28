@@ -1,3 +1,8 @@
+function onLoad() {
+  $("#searchBar").val("gorrilaz");
+  updatePage();
+}
+
 function updatePage() {
   const keyword = $("#searchBar").val().trim();
 
@@ -16,12 +21,9 @@ function updatePage() {
     $("#artist").text("Artist: " + artistData.name);
     $("#facebook").text("Facebook: " + artistData.facebook_page_url);
     $("#eventsAmount").text("Number of events: " + artistData.upcoming_event_count);
-    $("#Thumbnail").attr("src", artistData.thumb_url);
+    $("#thumbnail").attr("src", artistData.thumb_url);
 
-    console.log("Artist: " + artistData.name);
-    console.log("Facebook: " + artistData.facebook_page_url);
-    console.log("Number of events: " + artistData.upcoming_event_count);
-    console.log("Thumbnail: " + artistData.thumb_url);
+    console.log("---------------\nThumbnail: " + artistData.thumb_url + "\n---------------");
 
     eventAmount = artistData.upcoming_event_count;
   });
@@ -43,30 +45,16 @@ function updatePage() {
       $(`#location${i}`).text("Event Location: " + eventData[i].venue.location);
       $(`#tickets${i}`).text("Offer Type: " + eventData[i].offers[0].type);
       $(`#description${i}`).text("Description: " + eventData[i].description);
-
-      console.log("-------------------------------");
-      console.log("Event Name: " + eventData[i].title);
-      console.log("Event Date: " + eventData[i].datetime);
-      console.log("Venue Name: " + eventData[i].venue.name);
-      console.log("Event Location: " + eventData[i].venue.location);
-      console.log("Offer Type: " + eventData[i].offers[0].type);
-      console.log("Description: " + eventData[i].description);
-      console.log("Longitude: " + eventData[i].venue.longitude);
-      console.log("Latitude: " + eventData[i].venue.latitude);
-      console.log("-------------------------------");
     }
 
     const months = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     for (let i = 0; i < eventAmount; i++) {
       const eventMonth = eventData[i].datetime.slice(5, 7);
-      console.log("Every Event Month: " + eventMonth);
 
       let arrayMonthLocation = eventMonth - 1;
 
       arrayMonthLocation = parseInt(arrayMonthLocation);
-
-      console.log("in the array: " + arrayMonthLocation);
 
       months[arrayMonthLocation]++;
     }
@@ -89,7 +77,7 @@ function updatePage() {
       "---------------\nChart URL: " + chartQueryURL + "\n---------------"
     );
   });
-}
+};
 
 $("#runSearch").on("click", function (event) {
   event.preventDefault();
@@ -100,6 +88,8 @@ $("#runSearch").on("click", function (event) {
 $("#searchBer").submit(function (event) {
   event.preventDefault();
 });
+
+onLoad();
 
 // 5e819cfc0dc5827e31d44c0ea761bf34
 
@@ -137,4 +127,5 @@ $("button").click(function (event) {
       }
     }
   }
+  
 });
