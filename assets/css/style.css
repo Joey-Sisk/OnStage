@@ -9,6 +9,14 @@
   .is-family-sans-serif {
     font-family: "Lequire DEMO";
   }
+
+  .navbar-link{
+    color:white;
+  }
+
+  .navbar-item{
+    color: black;
+  }
   
   
   
@@ -39,3 +47,57 @@
     display: block;
     padding: 1.25rem;
   }
+.eventStyle{
+  background-color:#363636;
+  padding: 10% 5%;
+  border: black solid .10rem;
+  border-radius: 40%;
+  align-content: center;
+  font-size: small;
+  color: white;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.artistStyle{
+  background-image: url("../images/artistBack1.jpg");
+  padding-right: 2% 0;
+  padding-left: 1% 0;
+  border: black solid .05rem;
+  align-content: center;
+  font-size: small;
+  flex-wrap: nowrap;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  border-radius: 20%;
+  text-align: center;
+  
+}
+
+.artist{
+  text-align: center;
+  font-size: xx-large;
+
+}
+
+.event{
+  text-align: center;
+  font-size: xx-large;
+}
+
+.btn{
+  color: black;
+  background-color:#363636;
+  border: black solid .15rem;
+}
+
+.btn :hover{
+  color:red;
+  background-color:#363636;
+  box-shadow: red;
+  padding: 1%;
+  font-size: xx-large;
+}
+
