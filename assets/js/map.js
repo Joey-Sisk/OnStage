@@ -128,6 +128,7 @@ function getMap() {
           closeButton: false,
           closeOnClick: false,
         });
+
         map.on("mouseenter", "markers", (e) => {
           map.getCanvas().style.cursor = "pointer";
           popup
@@ -144,11 +145,11 @@ function getMap() {
       const nav = new mapboxgl.NavigationControl();
       map.addControl(nav);
 
-      var directions = new MapboxDirections({
-        accessToken: mapboxgl.accessToken,
-      });
+      // var directions = new MapboxDirections({
+      //   accessToken: mapboxgl.accessToken,
+      // });
 
-      map.addControl(directions, "top-left")
+    //   map.addControl(directions, "top-left")
     }
   });
 }

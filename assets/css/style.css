@@ -43,6 +43,5 @@
   #map {
     margin: auto;
     height: 495px;
-    width: 565px;
+    width: auto;
 }
-
