@@ -43,6 +43,21 @@ function updatePage() { // heavy lifter funcion calls primary and graph api
       $(`#location${i}`).text("Event Location: " + eventData[i].venue.location);
       $(`#tickets${i}`).text("Offer Type: " + eventData[i].offers[0].type);
       $(`#description${i}`).text("Description: " + eventData[i].description);
+<<<<<<< HEAD
+      getMap(eventData);
+
+      console.log("-------------------------------");
+      console.log("Event Name: " + eventData[i].title);
+      console.log("Event Date: " + eventData[i].datetime);
+      console.log("Venue Name: " + eventData[i].venue.name);
+      console.log("Event Location: " + eventData[i].venue.location);
+      console.log("Offer Type: " + eventData[i].offers[0].type);
+      console.log("Description: " + eventData[i].description);
+      console.log("Longitude: " + eventData[i].venue.longitude);
+      console.log("Latitude: " + eventData[i].venue.latitude);
+      console.log("-------------------------------");
+=======
+>>>>>>> 814cd5a7a0357349b087e47e60a4bd7ec992867b
     }
 
     const months = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // array for months graph

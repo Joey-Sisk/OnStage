@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css"/>
   <title>OnStage</title>
 </head>
 
@@ -53,10 +57,7 @@
     </div>
     <div class="tile is-parent">
       <div class="tile is-child box">
-        <p class="title">Map</p>
-        <figure class="image is-4by3">
-          <img src="https://bulma.io/images/placeholders/640x480.png">
-        </figure>
+        <div class="is-dark" id='map'></div>
       </div>
     </div>
     <div class="tile is-parent">

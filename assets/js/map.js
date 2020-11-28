@@ -17,7 +17,7 @@ function getMap() {
     }
 
     function errorLocation() {
-      setupMap([-2.24, 53.48]);
+      setupMap([-77.050,38.889]);
     }
 
     function setupMap(center) {
@@ -25,7 +25,7 @@ function getMap() {
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
         center: center,
-        zoom: 5,
+        zoom: 4,
         interactive: true,
       });
 
@@ -45,7 +45,7 @@ function getMap() {
                   ],
                 },
                 properties: {
-                  title: [eventData[0].venue.name],
+                  title: eventData[0].venue.name,
                   "marker-symbol": "default_marker",
                 },
               },
@@ -59,7 +59,7 @@ function getMap() {
                   ],
                 },
                 properties: {
-                  title: [eventData[1].venue.name],
+                  title: eventData[1].venue.name,
                   "marker-color": "#ff00ff",
                   "marker-symbol": "secondary_marker",
                 },
@@ -75,7 +75,7 @@ function getMap() {
                   ],
                 },
                 properties: {
-                  title: [eventData[2].venue.name],
+                  title: eventData[2].venue.name,
                   "marker-color": "#ff00ff",
                   "marker-symbol": "secondary_marker",
                 },
@@ -91,7 +91,7 @@ function getMap() {
                   ],
                 },
                 properties: {
-                  title: [eventData[3].venue.name],
+                  title: eventData[3].venue.name,
                   "marker-color": "#ff00ff",
                   "marker-symbol": "secondary_marker",
                 },
@@ -106,7 +106,7 @@ function getMap() {
                   ],
                 },
                 properties: {
-                  title: [eventData[4].venue.name],
+                  title: eventData[4].venue.name,
                   "marker-color": "#ff00ff",
                   "marker-symbol": "secondary_marker",
                 },
@@ -148,7 +148,7 @@ function getMap() {
         accessToken: mapboxgl.accessToken,
       });
 
-      // map.addControl(directions, "top-left")
+      map.addControl(directions, "top-left")
     }
   });
 }
