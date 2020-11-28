@@ -1,6 +1,6 @@
 # OnStage
-
-**Insert pic of final product here*
+Visit our Repo via:
+[https://joey-sisk.github.io/OnStage/](https://joey-sisk.github.io/OnStage/)
 #### Table of Contents
 * [About](#About)
 * [Installation](#Installation)
