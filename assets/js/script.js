@@ -18,10 +18,10 @@ function updatePage() { // heavy lifter funcion calls primary and graph api
     url: artistQueryURL,
     method: "GET",
   }).then(function (artistData) { // apply info to dom
-    $("#artist").text("Artist: " + artistData.name);
-    $("#facebook").text("Facebook: " + artistData.facebook_page_url);
+    $("#artist").text(artistData.name);
+    $("#facebook").text(artistData.facebook_page_url);
     $("#eventsAmount").text("Number of events: " + artistData.upcoming_event_count);
-    $("#thumbnail").attr("src", artistData.thumb_url);
+    $("#thumbnail").attr("src", artistData.image_url);
 
     eventAmount = artistData.upcoming_event_count;
   });
@@ -37,12 +37,12 @@ function updatePage() { // heavy lifter funcion calls primary and graph api
     method: "GET",
   }).then(function (eventData) { // apply up to 5 upcoming events to document
     for (let i = 0; i < 6; i++) { // apply up to 5 upcoming events to document
-      $(`#eventName${i}`).text("Event Name: " + eventData[i].title);
-      $(`#eventDate${i}`).text("Event Date: " + eventData[i].datetime);
-      $(`#venue${i}`).text("Venue Name: " + eventData[i].venue.name);
-      $(`#location${i}`).text("Event Location: " + eventData[i].venue.location);
+      $(`#eventName${i}`).text(eventData[i].title);
+      $(`#eventDate${i}`).text(eventData[i].datetime);
+      $(`#venue${i}`).text(eventData[i].venue.name);
+      $(`#location${i}`).text(eventData[i].venue.location);
       $(`#tickets${i}`).text("Offer Type: " + eventData[i].offers[0].type);
-      $(`#description${i}`).text("Description: " + eventData[i].description);
+      $(`#description${i}`).text(eventData[i].description);
 
       getMap(eventData);
 

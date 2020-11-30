@@ -23,9 +23,8 @@
           <image src="./assets/images/onstageGreen.png" alt="Onstage Logo"></image>
         </a>
         <a class="navbar-link">
-          Docs
+          Menu
         </a>
-    
       
         <div class="navbar-dropdown is-right">
           <a class="navbar-item">
@@ -48,7 +47,7 @@
       </div>
       <div class="control">
        <div class="control">
-        <button id="runSearch" class="button is-rounded is-info">
+        <button id="runSearch" class="button is-info">
         Search
         </button>
       </div>
@@ -56,6 +55,11 @@
      </form>
   </div>
 
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box">
+        <img id="thumbnail" src="" alt="Artist Thumbnail" style="width:auto;"></image>
+      </div>
     </div>
     <div class="tile is-parent">
       <div class="tile is-child box">
@@ -77,39 +81,41 @@
       <p class="title">Results</p>
       
     <div>
-      <div id="aritstInfo">
-        <h3 id="artist"></h3>
+      <div class="artistStyle" id="aritstInfo">
+        <h3 class="artist" id="artist"></h3>
         <p id="facebook"></p>
         <p id="eventsAmount"></p>
-        <img id="thumbnail" src="" alt="Artist Thumbnail"></image>
       </div>
 
       <br>
       
-      <div id="eventInfo0">
-        <p id="eventName0"></p>
-        <p id="eventDate0"></p>
-        <p id="venue0"></p>
-        <p id="location0"></p>
-        <p id="tickets0"></p>
-        <p id="description0"></p>
+      <div class="eventStyle" id="eventInfo0">
+        <button class="btn"><i class="fas fa-heart"></i></button>
+        <p class="event"  id="eventName0"></p>
+        <p  id="eventDate0"></p>
+        <p  id="venue0"></p>
+        <p  id="location0"></p>
+        <p  id="tickets0"></p>
+        <p  id="description0"></p>
       </div>
 
       <br>
 
-      <div id="eventInfo1">
-        <p id="eventName1"></p>
-        <p id="eventDate1"></p>
-        <p id="venue1"></p>
-        <p id="location1"></p>
-        <p id="tickets1"></p>
-        <p id="description1"></p>
+      <div class="eventStyle" id="eventInfo1">
+        <button class="btn"><i class="fas fa-heart"></i></button>
+        <p class="event"  id="eventName1"></p>
+        <p  id="eventDate1"></p>
+        <p  id="venue1"></p>
+        <p  id="location1"></p>
+        <p  id="tickets1"></p>
+        <p  id="description1"></p>
       </div>
 
       <br>
 
-      <div id="eventInfo2">
-        <p id="eventName2"></p>
+      <div class="eventStyle" id="eventInfo2">
+        <button class="btn"><i class="fas fa-heart"></i></button>
+        <p class="event" id="eventName2"></p>
         <p id="eventDate2"></p>
         <p id="venue2"></p>
         <p id="location2"></p>
@@ -119,8 +125,9 @@
 
       <br>
 
-      <div id="eventInfo3">
-        <p id="eventName3"></p>
+      <div class="eventStyle" id="eventInfo3">
+        <button class="btn"><i class="fas fa-heart"></i></button>
+        <p class="event" id="eventName3"></p>
         <p id="eventDate3"></p>
         <p id="venue3"></p>
         <p id="location3"></p>
@@ -130,8 +137,9 @@
 
       <br>
 
-      <div id="eventInfo4">
-        <p id="eventName4"></p>
+      <div class="eventStyle" id="eventInfo4">
+        <button class="btn"><i class="fas fa-heart"></i></button>
+        <p class="event" id="eventName4"></p>
         <p id="eventDate4"></p>
         <p id="venue4"></p>
         <p id="location4"></p>
@@ -150,6 +158,7 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  <script src="https://kit.fontawesome.com/290d6f03b6.js" crossorigin="anonymous"></script>
   <script src="./assets/js/script.js"></script>
   <script src="./assets/js/map.js"></script>
 
