@@ -99,5 +99,9 @@
   box-shadow: red;
   padding: 1%;
   font-size: xx-large;
-}
 
+  #map {
+    margin: auto;
+    height: 495px;
+    width: auto;
+}
