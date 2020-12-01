@@ -1,6 +1,6 @@
 # OnStage
-![Willie](./assets/images/willie.jpg)
-![map](./assets/images/map.jpg)
+![Willie](./assets/images/willie.JPG)
+![map](./assets/images/map.JPG)
 #### Table of Contents
 * [About](#About)
 * [Installation](#Installation)
