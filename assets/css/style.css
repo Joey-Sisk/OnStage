@@ -1,16 +1,4 @@
-.is-family-primary {
-    font-family: "Lequire DEMO";
-  }
-  
-  .is-family-secondary {
-    font-family: "Lequire DEMO";
-  }
-  
-  .is-family-sans-serif {
-    font-family: "Lequire DEMO";
-  }
-
-  .navbar-link{
+ .navbar-link{
     color:white;
   }
 
@@ -48,13 +36,13 @@
     padding: 1.25rem;
   }
 .eventStyle{
-  background-color:#363636;
+  background-color:#a7ecf8;
   padding: 10% 5%;
-  border: black solid .10rem;
+  border: rgb(100, 100, 100) solid .10rem;
   border-radius: 40%;
   align-content: center;
   font-size: small;
-  color: white;
+  color: rgb(82, 82, 82);
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
@@ -64,7 +52,7 @@
   background-image: url("../images/artistBack1.jpg");
   padding-right: 2% 0;
   padding-left: 1% 0;
-  border: black solid .05rem;
+  border: rgb(0, 0, 0) solid .05rem;
   align-content: center;
   font-size: small;
   flex-wrap: nowrap;
@@ -89,17 +77,19 @@
 
 .btn{
   color: black;
-  background-color:#363636;
+  background-color:#a7ecf8;
   border: black solid .15rem;
 }
 
 .btn :hover{
   color:red;
-  background-color:#363636;
+  background-color:#a7ecf8;
   box-shadow: red;
   padding: 1%;
   font-size: xx-large;
 }
+#map {
+=======
 #map {
     margin: auto;
     height: 495px;
