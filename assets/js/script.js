@@ -89,7 +89,9 @@ onLoad();
 // 5e819cfc0dc5827e31d44c0ea761bf34
 
 // -----------------------
-
+$(".btn").click(function() {
+  $(this).toggleClass("fas fa-heart");
+});
 //Save button for searching
 
 $("#buttonSubmit").submit(function (event) {

@@ -1,6 +1,6 @@
 # OnStage
-
-**Insert pic of final product here*
+![Willie](./assets/images/willie.JPG)
+![map](./assets/images/map.JPG)
 #### Table of Contents
 * [About](#About)
 * [Installation](#Installation)
