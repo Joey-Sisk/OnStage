@@ -1,4 +1,8 @@
 # OnStage
+
+# This app is retired
+* due to the fact that BandsInTown only lends their api out temporarily this applicaiton will no longer load artist data. We are keeping this repository up for future reference and possibly to return to in the future.
+
 ![Willie](./assets/images/willie.JPG)
 ![map](./assets/images/map.JPG)
 #### Table of Contents
